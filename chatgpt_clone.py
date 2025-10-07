@@ -23,8 +23,14 @@ def main():
         layout="centered"
     )
     
-    # Simple header
-    st.title("💬 ChatGPT")
+    # Header with clear button
+    col1, col2 = st.columns([4, 1])
+    with col1:
+        st.title("💬 ChatGPT")
+    with col2:
+        if st.button("🗑️ Clear Chat", type="secondary"):
+            st.session_state.messages = []
+            st.rerun()
     
     # Initialize chat history
     if "messages" not in st.session_state:
