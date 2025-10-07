@@ -7,6 +7,7 @@ A Python project with virtual environment, testing, and linting setup.
 - Virtual environment management
 - pytest with coverage reporting
 - pylint for code quality
+- OpenAI API integration with python-dotenv
 - Pre-configured development environment
 
 ## Setup
@@ -25,6 +26,12 @@ A Python project with virtual environment, testing, and linting setup.
 3. Install development dependencies:
    ```bash
    pip install -r requirements-dev.txt
+   ```
+
+4. Set up environment variables:
+   ```bash
+   cp .env.example .env
+   # Edit .env and add your OpenAI API key
    ```
 
 ## Development
