@@ -51,13 +51,30 @@ pytest --cov=src --cov-report=html --cov-report=term
 pylint src/
 ```
 
+### Running Streamlit Apps
+```bash
+# Simple Hello World app
+streamlit run hello_streamlit.py
+
+# AI-powered chat app
+streamlit run streamlit_app.py
+```
+
 ### Project Structure
 ```
 .
 ├── src/                    # Source code
-│   └── __init__.py
+│   ├── __init__.py
+│   ├── main.py
+│   └── openai_example.py
 ├── tests/                  # Test files
-│   └── __init__.py
+│   ├── __init__.py
+│   ├── test_main.py
+│   └── test_openai_example.py
+├── docs/                   # Documentation
+│   └── streamlit_guide.md
+├── streamlit_app.py        # AI chat web app
+├── hello_streamlit.py      # Simple Streamlit demo
 ├── .gitignore             # Git ignore rules
 ├── requirements.txt       # Production dependencies
 ├── requirements-dev.txt   # Development dependencies
@@ -65,6 +82,24 @@ pylint src/
 ├── pylintrc             # pylint configuration
 └── README.md            # This file
 ```
+
+## Streamlit Apps
+
+This project includes two Streamlit applications:
+
+### 1. Hello Streamlit (`hello_streamlit.py`)
+A simple introduction to Streamlit featuring:
+- Interactive widgets (sliders, text inputs, buttons)
+- Data visualization (charts and tables)
+- Basic UI components and layout
+
+### 2. AI Chat App (`streamlit_app.py`)
+An AI-powered chat application featuring:
+- Real-time chat interface
+- OpenAI GPT integration
+- Configurable AI parameters
+- Session state management
+- Sample prompts and chat history
 
 ## Usage
 
